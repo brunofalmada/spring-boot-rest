@@ -28,7 +28,7 @@ public class TrainerController {
 		if (service.addTrainer(id, trainer)) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 		}
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID is no empty.");
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID is not empty.");
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
