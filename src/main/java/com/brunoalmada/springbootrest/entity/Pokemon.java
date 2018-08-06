@@ -22,11 +22,11 @@ public class Pokemon extends NamedEntity {
 		this.type = type;
 	}
 
-	public int getEvolution() {
+	public int getEvolutionId() {
 		return evolutionId;
 	}
 
-	public void setEvolution(int evolutionId) {
+	public void setEvolutionId(int evolutionId) {
 		this.evolutionId = evolutionId;
 	}
 

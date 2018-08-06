@@ -30,10 +30,10 @@ public class EvolutionService {
 		CapturedPokemon capturedPokemon = trainerService.getCapturedPokemon(trainerId, backpackId);
 		if (capturedPokemon != null) {
 			int pokemonId = capturedPokemon.getPokemonId();
-			if (pokemonService.getPokemon(pokemonId).getEvolution() != 0) {
+			if (pokemonService.getPokemon(pokemonId).getEvolutionId() != 0) {
 				Evolution evolution = new Evolution(new Date(System.currentTimeMillis()), trainerId, backpackId,
 						pokemonId);
-				capturedPokemon.setPokemonId(pokemonService.getPokemon(pokemonId).getEvolution());
+				capturedPokemon.setPokemonId(pokemonService.getPokemon(pokemonId).getEvolutionId());
 				evolutionHistory.add(evolution);
 				return new Message(true, evolutionToString(evolution));
 			}
@@ -56,7 +56,7 @@ public class EvolutionService {
 						.get(evolution.getBackpackId()).getPokemonNickname()
 				+ " do treinador " + trainerService.getTrainer(evolution.getTrainerId()).getName() + " evoluiu de "
 				+ pokemonService.getPokemon(evolution.getOriginPokemonId()).getName() + " para " + pokemonService
-						.getPokemon(pokemonService.getPokemon(evolution.getOriginPokemonId()).getEvolution()).getName()
+						.getPokemon(pokemonService.getPokemon(evolution.getOriginPokemonId()).getEvolutionId()).getName()
 				+ " no dia " + new SimpleDateFormat("dd/MM/yyyy").format(evolution.getDate()) + ".");
 	}
 
