@@ -4,11 +4,11 @@
 
 ### Installing
 
-mvn clean package
+`mvn clean package`
 
 ### Running Locally
 
-java -jar .\target\spring-boot-rest-1.0.0.jar
+`java -jar .\target\spring-boot-rest-1.0.0.jar`
 
 ## Built With
 
