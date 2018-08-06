@@ -14,9 +14,9 @@ java -jar .\target\spring-boot-rest-1.0.0.jar
 
 ## Built With
 
-[Spring](https://spring.io/) - Web Framework
-[Maven](https://maven.apache.org/) - Dependency Management
-[Swagger](https://swagger.io/) - Documentation
+* [Spring](https://spring.io/) - Web Framework
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [Swagger](https://swagger.io/) - Documentation
 
 ## Documentation
 
