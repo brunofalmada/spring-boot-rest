@@ -5,6 +5,10 @@ import java.util.Map;
 
 import com.brunoalmada.springbootrest.entity.helper.Message;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 public class Backpack {
 
 	Map<Integer, CapturedPokemon> capturedPokemons;

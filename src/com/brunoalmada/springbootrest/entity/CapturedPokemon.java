@@ -1,5 +1,9 @@
 package com.brunoalmada.springbootrest.entity;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 public class CapturedPokemon {
 	private int pokemonId;
 	private String pokemonNickname;

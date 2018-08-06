@@ -12,6 +12,10 @@ import com.brunoalmada.springbootrest.entity.CapturedPokemon;
 import com.brunoalmada.springbootrest.entity.Evolution;
 import com.brunoalmada.springbootrest.entity.helper.Message;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 @Service
 public class EvolutionService {
 	List<Evolution> evolutionHistory = new ArrayList<Evolution>();

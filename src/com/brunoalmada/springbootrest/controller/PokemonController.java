@@ -16,12 +16,23 @@ import org.springframework.web.bind.annotation.RestController;
 import com.brunoalmada.springbootrest.entity.Pokemon;
 import com.brunoalmada.springbootrest.service.PokemonService;
 
+/**
+ * This is the rest controller responsible for the pokemon entities.
+ *
+ * @author Bruno Faria Almada
+ * 
+ */
 @RestController
 @RequestMapping("/pokemons")
 public class PokemonController {
 	@Autowired
 	PokemonService service;
 
+	/**
+	 * @param id      of pokemon entry
+	 * @param pokemon JSON of a pokemon entity
+	 * @return no content
+	 */
 	@RequestMapping(value = "/add/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<String> putPokemon(@PathVariable int id, @RequestBody Pokemon pokemon) {
 		if (service.addPokemon(id, pokemon)) {
@@ -30,6 +41,10 @@ public class PokemonController {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID is not empty.");
 	}
 
+	/**
+	 * @param pokemon JSON of a pokemon entity
+	 * @return URI for the newly created resource
+	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public ResponseEntity<Integer> postPokemon(@RequestBody Pokemon pokemon) {
 		try {
@@ -40,16 +55,28 @@ public class PokemonController {
 		}
 	}
 
+	/**
+	 * @param id of pokemon entry
+	 * @return pokemon entity linked with provided id
+	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Pokemon> getPokemon(@PathVariable int id) {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getPokemon(id));
 	}
 
+	/**
+	 * @return list of all stored pokemon
+	 */
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ResponseEntity<Hashtable<Integer, Pokemon>> getAllPokemon() {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getAll());
 	}
 
+	/**
+	 * @param id      of pokemon entry
+	 * @param pokemon JSON of a pokemon entity
+	 * @return no content
+	 */
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<String> updatePokemon(@PathVariable int id, @RequestBody Pokemon pokemon) {
 		if (service.updatePokemon(id, pokemon)) {
@@ -58,6 +85,10 @@ public class PokemonController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID does not exist.");
 	}
 
+	/**
+	 * @param id of pokemon entry
+	 * @return no content
+	 */
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deletePokemon(@PathVariable int id) {
 		if (service.removePokemon(id)) {

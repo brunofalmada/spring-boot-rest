@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 import com.brunoalmada.springbootrest.entity.CapturedPokemon;
 import com.brunoalmada.springbootrest.entity.Trainer;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 @Service
 public class TrainerService {
 	Hashtable<Integer, Trainer> trainers = new Hashtable<Integer, Trainer>();

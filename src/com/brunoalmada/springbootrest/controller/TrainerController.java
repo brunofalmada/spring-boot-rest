@@ -17,12 +17,23 @@ import com.brunoalmada.springbootrest.entity.CapturedPokemon;
 import com.brunoalmada.springbootrest.entity.Trainer;
 import com.brunoalmada.springbootrest.service.TrainerService;
 
+/**
+ * This is the rest controller responsible for the trainer entries.
+ *
+ * @author Bruno Faria Almada
+ * 
+ */
 @RestController
 @RequestMapping("/trainers")
 public class TrainerController {
 	@Autowired
 	TrainerService service;
 
+	/**
+	 * @param id      of trainer entry
+	 * @param trainer JSON of a trainer entity
+	 * @return no content
+	 */
 	@RequestMapping(value = "/add/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<String> putTrainer(@PathVariable int id, @RequestBody Trainer trainer) {
 		if (service.addTrainer(id, trainer)) {
@@ -31,6 +42,10 @@ public class TrainerController {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID is not empty.");
 	}
 
+	/**
+	 * @param trainer JSON of a trainer entity
+	 * @return URI for the newly created resource
+	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public ResponseEntity<Integer> postTrainer(@RequestBody Trainer trainer) {
 		try {
@@ -41,16 +56,28 @@ public class TrainerController {
 		}
 	}
 
+	/**
+	 * @param id of trainer entry
+	 * @return trainer entity linked with provided id
+	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Trainer> getTrainer(@PathVariable int id) {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getTrainer(id));
 	}
 
+	/**
+	 * @return list of all stored trainers
+	 */
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ResponseEntity<Hashtable<Integer, Trainer>> getAllTrainers() {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getAll());
 	}
 
+	/**
+	 * @param id      of trainer entry
+	 * @param trainer JSON of a trainer entity
+	 * @return no content
+	 */
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<String> updateTrainer(@PathVariable int id, @RequestBody Trainer trainer) {
 		if (service.updateTrainer(id, trainer)) {
@@ -59,6 +86,10 @@ public class TrainerController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID does not exist.");
 	}
 
+	/**
+	 * @param id of trainer entry
+	 * @return no content
+	 */
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteTrainer(@PathVariable int id) {
 		if (service.removeTrainer(id)) {
@@ -67,6 +98,11 @@ public class TrainerController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID does not exist.");
 	}
 
+	/**
+	 * @param trainerId  id of trainer entry
+	 * @param backpackId pokemon position in the backpack
+	 * @return captured pokemon entity
+	 */
 	@RequestMapping(value = "/{trainerId}/backpack/{backpackId}", method = RequestMethod.GET)
 	public ResponseEntity<CapturedPokemon> getCapturedPokemon(@PathVariable int trainerId,
 			@PathVariable int backpackId) {

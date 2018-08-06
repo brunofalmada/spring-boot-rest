@@ -14,6 +14,12 @@ import com.brunoalmada.springbootrest.entity.helper.EvolutionRequest;
 import com.brunoalmada.springbootrest.entity.helper.Message;
 import com.brunoalmada.springbootrest.service.EvolutionService;
 
+/**
+ * This is the rest controller responsible for the pokemon evolutions.
+ *
+ * @author Bruno Faria Almada
+ * 
+ */
 @RestController
 @RequestMapping("/evolutions")
 public class EvolutionController {
@@ -21,6 +27,10 @@ public class EvolutionController {
 	@Autowired
 	EvolutionService evolutionService;
 
+	/**
+	 * @param evolutionRequest JSON containing trainerId and backpackId
+	 * @return result of the evolution requisition
+	 */
 	@RequestMapping(value = "/evolve", method = RequestMethod.POST)
 	public ResponseEntity<String> evolvePokemon(@RequestBody EvolutionRequest evolutionRequest) {
 		int backpackId = evolutionRequest.getBackpackId();
@@ -32,6 +42,9 @@ public class EvolutionController {
 		return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(result.getMessage());
 	}
 
+	/**
+	 * @return list of all stored evolutions
+	 */
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ResponseEntity<List<String>> getAll() {
 		return ResponseEntity.status(HttpStatus.OK).body(evolutionService.getEvolutionHistory());

@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.brunoalmada.springbootrest.entity.Pokemon;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 @Service
 public class PokemonService {
 	Hashtable<Integer, Pokemon> pokemons = new Hashtable<Integer, Pokemon>();

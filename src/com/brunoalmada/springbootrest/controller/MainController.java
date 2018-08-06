@@ -15,6 +15,12 @@ import com.brunoalmada.springbootrest.entity.helper.CaptureRequest;
 import com.brunoalmada.springbootrest.entity.helper.Message;
 import com.brunoalmada.springbootrest.service.MainService;
 
+/**
+ * This is the main rest controller.
+ *
+ * @author Bruno Faria Almada
+ * 
+ */
 @RestController
 @RequestMapping("/main")
 public class MainController {
@@ -22,6 +28,10 @@ public class MainController {
 	@Autowired
 	private MainService mainService;
 
+	/**
+	 * @param captureRequest JSON containing pokemonId, trainerId and nickname
+	 * @return URI for the newly created entity
+	 */
 	@RequestMapping(value = "/capture", method = RequestMethod.POST)
 	public ResponseEntity<String> capturePokemon(@RequestBody CaptureRequest captureRequest) {
 		int trainerId = captureRequest.getTrainerId();

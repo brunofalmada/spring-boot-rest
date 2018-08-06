@@ -1,5 +1,9 @@
 package com.brunoalmada.springbootrest.entity.helper;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 public class Message {
 	private boolean successful;
 

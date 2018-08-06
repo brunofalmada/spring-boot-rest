@@ -1,5 +1,9 @@
 package com.brunoalmada.springbootrest.entity;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 public class Trainer extends NamedEntity {
 	public enum Sex {
 		MALE, FEMALE

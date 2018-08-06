@@ -2,6 +2,10 @@ package com.brunoalmada.springbootrest.entity;
 
 import java.util.Date;
 
+/**
+ * @author Bruno Faria Almada
+ *
+ */
 public class Evolution {
 
 	private Date date;
