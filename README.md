@@ -6,7 +6,7 @@
 
 `mvn clean package`
 
-### Running Locally
+### Running locally
 
 `java -jar .\target\spring-boot-rest-1.0.0.jar`
 
