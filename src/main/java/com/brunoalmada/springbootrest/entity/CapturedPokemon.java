@@ -1,12 +1,20 @@
 package com.brunoalmada.springbootrest.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author Bruno Faria Almada
  *
  */
 public class CapturedPokemon {
+
+	@ApiModelProperty(notes = "Id of the pokemon")
 	private int pokemonId;
+
+	@ApiModelProperty(notes = "Nickname of the pokemon")
 	private String pokemonNickname;
+
+	@ApiModelProperty(notes = "Level of the pokemon")
 	private int pokemonLevel;
 
 	public CapturedPokemon(int pokemonId, String pokemonNickname) {

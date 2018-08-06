@@ -1,13 +1,21 @@
 package com.brunoalmada.springbootrest.entity.helper;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author Bruno Faria Almada
  *
  */
 public class CaptureRequest {
+	
+    @ApiModelProperty(notes = "Id of the trainer")
 	int trainerId;
+    
+    @ApiModelProperty(notes = "Id of the pokemon")
 	int pokemonId;
-	String nickname;
+
+    @ApiModelProperty(notes = "Nickname of the pokemon")
+    String nickname;
 
 	public int getTrainerId() {
 		return trainerId;

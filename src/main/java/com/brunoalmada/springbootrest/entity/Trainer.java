@@ -1,5 +1,9 @@
 package com.brunoalmada.springbootrest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author Bruno Faria Almada
  *
@@ -9,8 +13,10 @@ public class Trainer extends NamedEntity {
 		MALE, FEMALE
 	}
 
+	@JsonIgnore
 	private Backpack backpack;
 
+	@ApiModelProperty(notes = "Sex of the trainer")
 	private Sex sex;
 
 	public Trainer() {
