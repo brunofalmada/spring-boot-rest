@@ -1,6 +1,4 @@
-# Project Title
-
-Spring boot rest API
+# Spring boot rest API
 
 ## Getting Started 
 
@@ -8,7 +6,7 @@ Spring boot rest API
 
 mvn clean package
 
-### Testing
+### Running Locally
 
 java -jar .\target\spring-boot-rest-1.0.0.jar
 
