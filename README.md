@@ -25,3 +25,6 @@ API-docs.html contains the rest controllers documentation.
 Also available (while running) at:
 http://localhost:8080/swagger-ui.html
 
+## Authors
+
+* **Bruno Faria Almada**
