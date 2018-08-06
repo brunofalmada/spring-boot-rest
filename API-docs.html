@@ -1,0 +1,2526 @@
+ 							
+
+
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+				
+		<!-- a bootstrap css is mandatory -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+		
+		<style type="text/css">
+
+		
+			.summary-table tr td:nth-child(1){
+    			width:5%;
+			}
+			.summary-table tr td:nth-child(2){
+    			width:5%;
+			}		
+			.summary-table tr td:nth-child(3){
+    			width:30%;
+			}					
+			.info-table tr td:nth-child(1){
+    			width:15%;
+			}						
+
+			.operation-intro-table tr td:nth-child(1){
+    			width:20%;
+			}			
+			
+			.param-table tr td:nth-child(1){
+				width:10%;
+			}
+			.param-table tr td:nth-child(2){				
+				width:10%;
+			}
+			.param-table tr td:nth-child(3){
+				width:60%;
+			}
+			.param-table tr td:nth-child(4){
+				width:10%;
+			}													
+						
+			.response-table tr td:nth-child(1){
+				width:10%;
+			}			
+			
+			.response-table tr td:nth-child(2){				
+				width:20%;
+			}		
+			
+			.model-rows-table tr td:nth-child(1){
+				width:40%;
+			} 
+			.model-rows-table tr td:nth-child(2){
+				width:5%;
+			}		
+			.model-rows-table tr td:nth-child(3){
+				width:40%;
+			}		
+			.model-rows-table tr td:nth-child(4){
+				width:5%;
+			}		
+			.model-rows-table tr td:nth-child(5){
+				width:5%;
+			}																	
+			.model-rows-table tr td:nth-child(6){
+				width:5%;
+			}					
+ 						
+			
+		</style>
+		
+			
+		<title>
+			Pokemon API
+		</title>
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		</head>
+		<body>
+		
+		<div class="container">
+			<h1>Pokemon API</h1>		
+			
+			
+				<h2>Information</h2>		
+				<div>						
+					<table class="table table-bordered info-table">
+						<tbody>
+								<tr>											
+									<td>Base URL</td> 
+									<td>
+									</td>
+								</tr>							
+						
+						
+								<tr>											
+									<td>Version</td> <td>1.0.0</td>
+								</tr>
+								
+								
+								
+									<tr>											
+										<td>Description</td> <td>  <p>"Spring Boot REST API"</p>   </td>
+									</tr>
+								
+						</tbody>
+					</table>	
+				</div>						
+
+ 
+			
+			<h2>Table of Contents</h2>		
+			
+				<h3>evolution-controller</h3>
+				<h4>Evolution Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#evolution-controller::::/evolutions/all::::GET">1</a></td>								
+										<td><a href="#evolution-controller::::/evolutions/all::::GET">GET</a></td>								
+										<td><a href="#evolution-controller::::/evolutions/all::::GET">/evolutions/all</a></td>
+										<td>
+												getAll
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#evolution-controller::::/evolutions/evolve::::POST">2</a></td>								
+										<td><a href="#evolution-controller::::/evolutions/evolve::::POST">POST</a></td>								
+										<td><a href="#evolution-controller::::/evolutions/evolve::::POST">/evolutions/evolve</a></td>
+										<td>
+												evolvePokemon
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>main-controller</h3>
+				<h4>Main Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#main-controller::::/main/capture::::POST">1</a></td>								
+										<td><a href="#main-controller::::/main/capture::::POST">POST</a></td>								
+										<td><a href="#main-controller::::/main/capture::::POST">/main/capture</a></td>
+										<td>
+												capturePokemon
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>pokemon-controller</h3>
+				<h4>Pokemon Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/add::::POST">1</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/add::::POST">POST</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/add::::POST">/pokemons/add</a></td>
+										<td>
+												postPokemon
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">2</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">PUT</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">/pokemons/add/{id}</a></td>
+										<td>
+												putPokemon
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/all::::GET">3</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/all::::GET">GET</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/all::::GET">/pokemons/all</a></td>
+										<td>
+												getAllPokemon
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">4</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">DELETE</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">/pokemons/delete/{id}</a></td>
+										<td>
+												deletePokemon
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">5</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">PUT</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">/pokemons/update/{id}</a></td>
+										<td>
+												updatePokemon
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">6</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">GET</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">/pokemons/{id}</a></td>
+										<td>
+												getPokemon
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>trainer-controller</h3>
+				<h4>Trainer Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/add::::POST">1</a></td>								
+										<td><a href="#trainer-controller::::/trainers/add::::POST">POST</a></td>								
+										<td><a href="#trainer-controller::::/trainers/add::::POST">/trainers/add</a></td>
+										<td>
+												postTrainer
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">2</a></td>								
+										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">PUT</a></td>								
+										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">/trainers/add/{id}</a></td>
+										<td>
+												putTrainer
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/all::::GET">3</a></td>								
+										<td><a href="#trainer-controller::::/trainers/all::::GET">GET</a></td>								
+										<td><a href="#trainer-controller::::/trainers/all::::GET">/trainers/all</a></td>
+										<td>
+												getAllTrainers
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">4</a></td>								
+										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">DELETE</a></td>								
+										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">/trainers/delete/{id}</a></td>
+										<td>
+												deleteTrainer
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">5</a></td>								
+										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">PUT</a></td>								
+										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">/trainers/update/{id}</a></td>
+										<td>
+												updateTrainer
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/{id}::::GET">6</a></td>								
+										<td><a href="#trainer-controller::::/trainers/{id}::::GET">GET</a></td>								
+										<td><a href="#trainer-controller::::/trainers/{id}::::GET">/trainers/{id}</a></td>
+										<td>
+												getTrainer
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">7</a></td>								
+										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">GET</a></td>								
+										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">/trainers/{trainerId}/backpack/{backpackId}</a></td>
+										<td>
+												getCapturedPokemon
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+	
+			
+			
+			
+			<!-- One tag after another-->			
+			
+				<h2>evolution-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="evolution-controller::::/evolutions/all::::GET">GET /evolutions/all</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getAll</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">array[string]</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="evolution-controller::::/evolutions/evolve::::POST">POST /evolutions/evolve</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>evolvePokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>evolutionRequest</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">EvolutionRequest</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>backpackId</td>
+							<td>int32</td>
+							<td>Position of pokemon in backpack</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>trainerId</td>
+							<td>int32</td>
+							<td>Id of the trainer</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>evolutionRequest</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>main-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="main-controller::::/main/capture::::POST">POST /main/capture</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>capturePokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>captureRequest</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">CaptureRequest</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>nickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>pokemonId</td>
+							<td>int32</td>
+							<td>Id of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>trainerId</td>
+							<td>int32</td>
+							<td>Id of the trainer</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>captureRequest</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>pokemon-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/add::::POST">POST /pokemons/add</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>postPokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>pokemon</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Pokemon</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>evolutionId</td>
+							<td>int32</td>
+							<td>Id of the pokemon this evolves to</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>type</td>
+							<td>string</td>
+							<td>Type of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>pokemon</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">int32</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/add/{id}::::PUT">PUT /pokemons/add/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>putPokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>pokemon</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Pokemon</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>evolutionId</td>
+							<td>int32</td>
+							<td>Id of the pokemon this evolves to</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>type</td>
+							<td>string</td>
+							<td>Type of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>pokemon</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/all::::GET">GET /pokemons/all</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getAllPokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/delete/{id}::::DELETE">DELETE /pokemons/delete/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>deletePokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/update/{id}::::PUT">PUT /pokemons/update/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>updatePokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>pokemon</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Pokemon</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>evolutionId</td>
+							<td>int32</td>
+							<td>Id of the pokemon this evolves to</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>type</td>
+							<td>string</td>
+							<td>Type of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>pokemon</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="pokemon-controller::::/pokemons/{id}::::GET">GET /pokemons/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getPokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">Pokemon</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>evolutionId</td>
+							<td>int32</td>
+							<td>Id of the pokemon this evolves to</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>type</td>
+							<td>string</td>
+							<td>Type of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>trainer-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/add::::POST">POST /trainers/add</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>postTrainer</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>trainer</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Trainer</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>sex</td>
+							<td>string</td>
+							<td>Sex of the trainer</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>trainer</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">int32</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/add/{id}::::PUT">PUT /trainers/add/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>putTrainer</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>trainer</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Trainer</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>sex</td>
+							<td>string</td>
+							<td>Sex of the trainer</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>trainer</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/all::::GET">GET /trainers/all</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getAllTrainers</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/delete/{id}::::DELETE">DELETE /trainers/delete/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>deleteTrainer</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/update/{id}::::PUT">PUT /trainers/update/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>updateTrainer</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>trainer</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">Trainer</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>sex</td>
+							<td>string</td>
+							<td>Sex of the trainer</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>trainer</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">string</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/{id}::::GET">GET /trainers/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getTrainer</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">Trainer</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>sex</td>
+							<td>string</td>
+							<td>Sex of the trainer</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">GET /trainers/{trainerId}/backpack/{backpackId}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>getCapturedPokemon</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>trainerId</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>trainerId</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>backpackId</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>backpackId</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">CapturedPokemon</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>pokemonId</td>
+							<td>int32</td>
+							<td>Id of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>pokemonLevel</td>
+							<td>int32</td>
+							<td>Level of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>pokemonNickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+		</div>			
+		</body>
+	</html>
+
+ 
+
+
