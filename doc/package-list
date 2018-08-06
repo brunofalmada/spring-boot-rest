@@ -1,0 +1,6 @@
+com.brunoalmada.springbootrest
+com.brunoalmada.springbootrest.configuration
+com.brunoalmada.springbootrest.controller
+com.brunoalmada.springbootrest.entity
+com.brunoalmada.springbootrest.entity.helper
+com.brunoalmada.springbootrest.service
