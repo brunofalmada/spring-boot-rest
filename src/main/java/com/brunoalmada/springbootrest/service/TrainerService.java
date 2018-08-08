@@ -1,10 +1,14 @@
 package com.brunoalmada.springbootrest.service;
 
-import java.util.Hashtable;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import com.brunoalmada.springbootrest.entity.CapturedPokemon;
 import com.brunoalmada.springbootrest.entity.Trainer;
 
 /**
@@ -13,56 +17,58 @@ import com.brunoalmada.springbootrest.entity.Trainer;
  */
 @Service
 public class TrainerService {
-	Hashtable<Integer, Trainer> trainers = new Hashtable<Integer, Trainer>();
-	int mapSize = 0;
 
-	public int addTrainer(Trainer trainer) {
-		mapSize++;
-		trainers.put(mapSize, trainer);
-		return mapSize;
+	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("default");
+
+	@Transactional
+	public long addTrainer(Trainer trainer) {
+		EntityManager entityManager = factory.createEntityManager();
+		entityManager.getTransaction().begin();
+		entityManager.persist(trainer);
+		entityManager.getTransaction().commit();
+		return trainer.getId();
 	}
 
-	public boolean addTrainer(int id, Trainer trainer) {
-		if (!trainers.containsKey(id)) {
-			if (id > mapSize) {
-				mapSize = id;
-			}
-			trainers.put(id, trainer);
+	@Transactional
+	public List<Trainer> getAll() {
+		EntityManager entityManager = factory.createEntityManager();
+		entityManager.getTransaction().begin();
+		List<Trainer> listTrainers = entityManager.createQuery("SELECT t FROM Trainer t").getResultList();
+		entityManager.getTransaction().commit();
+		entityManager.close();
+		return listTrainers;
+	}
+
+	@Transactional
+	public Trainer getTrainer(long id) {
+		EntityManager entityManager = factory.createEntityManager();
+		return entityManager.find(Trainer.class, id);
+	}
+
+	@Transactional
+	public boolean updateTrainer(long id, Trainer trainer) {
+		EntityManager entityManager = factory.createEntityManager();
+		if (entityManager.find(Trainer.class, id) != null) {
+			trainer.setId(id);
+			entityManager.getTransaction().begin();
+			entityManager.merge(trainer);
+			entityManager.getTransaction().commit();
 			return true;
 		}
 		return false;
 	}
 
-	public Hashtable<Integer, Trainer> getAll() {
-		return trainers;
-	}
-
-	public Trainer getTrainer(int id) {
-		return trainers.get(id);
-	}
-
-	public boolean updateTrainer(int id, Trainer trainer) {
-		if (trainers.contains(id)) {
-			trainer.setBackpack(trainers.get(id).getBackpack());
-			trainers.put(id, trainer);
-			return true;
-		}
-		return false;
-	}
-
-	public boolean removeTrainer(int id) {
-		if (trainers.containsKey(id)) {
-			trainers.remove(id);
-			return true;
-		}
-		return false;
-	}
-	
-	public CapturedPokemon getCapturedPokemon(int trainerId, int backpackId) {
-		Trainer trainer = trainers.get(trainerId);
+	@Transactional
+	public boolean removeTrainer(long id) {
+		EntityManager entityManager = factory.createEntityManager();
+		Trainer trainer = entityManager.find(Trainer.class, id);
 		if (trainer != null) {
-			return trainer.getBackpack().getCapturedPokemons().get(backpackId);
+			entityManager.getTransaction().begin();
+			entityManager.remove(trainer);
+			entityManager.getTransaction().commit();
+			return true;
 		}
-		return null;
+		return false;
 	}
+
 }

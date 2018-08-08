@@ -1,4 +1,6 @@
-package com.brunoalmada.springbootrest.entity;
+package com.brunoalmada.springbootrest.entity.helper;
+
+import javax.persistence.MappedSuperclass;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -6,9 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
  * @author Bruno Faria Almada
  *
  */
+@MappedSuperclass
 public class NamedEntity {
-	
-    @ApiModelProperty(notes = "Name of the entity")
+
+	@ApiModelProperty(notes = "Name of the entity")
 	private String name;
 
 	public String getName() {

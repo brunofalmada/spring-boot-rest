@@ -2,7 +2,7 @@ package com.brunoalmada.springbootrest.controller;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Hashtable;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,24 +29,11 @@ public class PokemonController {
 	PokemonService service;
 
 	/**
-	 * @param id      of pokemon entry
-	 * @param pokemon JSON of a pokemon entity
-	 * @return no content
-	 */
-	@RequestMapping(value = "/add/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<String> putPokemon(@PathVariable int id, @RequestBody Pokemon pokemon) {
-		if (service.addPokemon(id, pokemon)) {
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-		}
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID is not empty.");
-	}
-
-	/**
 	 * @param pokemon JSON of a pokemon entity
 	 * @return URI for the newly created resource
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public ResponseEntity<Integer> postPokemon(@RequestBody Pokemon pokemon) {
+	public ResponseEntity<Long> postPokemon(@RequestBody Pokemon pokemon) {
 		try {
 			return ResponseEntity.status(HttpStatus.CREATED)
 					.location(new URI("/pokemons/" + service.addPokemon(pokemon))).build();
@@ -60,7 +47,7 @@ public class PokemonController {
 	 * @return pokemon entity linked with provided id
 	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Pokemon> getPokemon(@PathVariable int id) {
+	public ResponseEntity<Pokemon> getPokemon(@PathVariable long id) {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getPokemon(id));
 	}
 
@@ -68,7 +55,7 @@ public class PokemonController {
 	 * @return list of all stored pokemon
 	 */
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
-	public ResponseEntity<Hashtable<Integer, Pokemon>> getAllPokemon() {
+	public ResponseEntity<List<Pokemon>> getAllPokemon() {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getAll());
 	}
 
@@ -78,7 +65,7 @@ public class PokemonController {
 	 * @return no content
 	 */
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<String> updatePokemon(@PathVariable int id, @RequestBody Pokemon pokemon) {
+	public ResponseEntity<String> updatePokemon(@PathVariable long id, @RequestBody Pokemon pokemon) {
 		if (service.updatePokemon(id, pokemon)) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 		}
@@ -90,7 +77,7 @@ public class PokemonController {
 	 * @return no content
 	 */
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<String> deletePokemon(@PathVariable int id) {
+	public ResponseEntity<String> deletePokemon(@PathVariable long id) {
 		if (service.removePokemon(id)) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 		}

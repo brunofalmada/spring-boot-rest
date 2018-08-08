@@ -1,15 +1,27 @@
 package com.brunoalmada.springbootrest.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * @author Bruno Faria Almada
  *
  */
+@Entity
 public class CapturedPokemon {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+
 	@ApiModelProperty(notes = "Id of the pokemon")
-	private int pokemonId;
+	@JoinColumn(name = "pokemon_id")
+	private long pokemonId;
 
 	@ApiModelProperty(notes = "Nickname of the pokemon")
 	private String pokemonNickname;
@@ -17,18 +29,30 @@ public class CapturedPokemon {
 	@ApiModelProperty(notes = "Level of the pokemon")
 	private int pokemonLevel;
 
-	public CapturedPokemon(int pokemonId, String pokemonNickname) {
+	public CapturedPokemon () {
+		this.pokemonLevel = 1;
+	}
+	
+	public CapturedPokemon(long pokemonId, String pokemonNickname) {
 		super();
 		this.pokemonId = pokemonId;
 		this.pokemonNickname = pokemonNickname;
 		this.pokemonLevel = 1;
 	}
 
-	public int getPokemonId() {
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getPokemonId() {
 		return pokemonId;
 	}
 
-	public void setPokemonId(int pokemonId) {
+	public void setPokemonId(long pokemonId) {
 		this.pokemonId = pokemonId;
 	}
 

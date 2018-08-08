@@ -2,21 +2,39 @@ package com.brunoalmada.springbootrest.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
 /**
  * @author Bruno Faria Almada
  *
  */
+@Entity
 public class Evolution {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
 	private Date date;
 
-	private int trainerId;
+	@JoinColumn(name = "trainer_id")
+	private long trainerId;
 
-	private int backpackId;
+	@JoinColumn(name = "capturedpokemon_id")
+	private long backpackId;
 
-	private int originPokemonId;
+	@JoinColumn(name = "pokemon_id")
+	private long originPokemonId;
 
-	public Evolution(Date date, int trainerId, int backpackId, int originPokemonId) {
+	public Evolution() {
+		super();
+	}
+
+	public Evolution(Date date, long trainerId, long backpackId, long originPokemonId) {
 		super();
 		this.date = date;
 		this.trainerId = trainerId;
@@ -32,27 +50,27 @@ public class Evolution {
 		this.date = date;
 	}
 
-	public int getTrainerId() {
+	public long getTrainerId() {
 		return trainerId;
 	}
 
-	public void setTrainerId(int trainerId) {
+	public void setTrainerId(long trainerId) {
 		this.trainerId = trainerId;
 	}
 
-	public int getBackpackId() {
+	public long getBackpackId() {
 		return backpackId;
 	}
 
-	public void setBackpackId(int backpackId) {
+	public void setBackpackId(long backpackId) {
 		this.backpackId = backpackId;
 	}
 
-	public int getOriginPokemonId() {
+	public long getOriginPokemonId() {
 		return originPokemonId;
 	}
 
-	public void setOriginPokemonId(int originPokemonId) {
+	public void setOriginPokemonId(long originPokemonId) {
 		this.originPokemonId = originPokemonId;
 	}
 
