@@ -205,15 +205,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">2</a></td>								
-										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">PUT</a></td>								
-										<td><a href="#pokemon-controller::::/pokemons/add/{id}::::PUT">/pokemons/add/{id}</a></td>
-										<td>
-												putPokemon
-										</td>											 					
-									</tr>								
-									<tr>
-										<td><a href="#pokemon-controller::::/pokemons/all::::GET">3</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/all::::GET">2</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/all::::GET">GET</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/all::::GET">/pokemons/all</a></td>
 										<td>
@@ -221,7 +213,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">4</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">3</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">DELETE</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/delete/{id}::::DELETE">/pokemons/delete/{id}</a></td>
 										<td>
@@ -229,7 +221,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">5</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">4</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">PUT</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/update/{id}::::PUT">/pokemons/update/{id}</a></td>
 										<td>
@@ -237,7 +229,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">6</a></td>								
+										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">5</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">GET</a></td>								
 										<td><a href="#pokemon-controller::::/pokemons/{id}::::GET">/pokemons/{id}</a></td>
 										<td>
@@ -271,15 +263,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">2</a></td>								
-										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">PUT</a></td>								
-										<td><a href="#trainer-controller::::/trainers/add/{id}::::PUT">/trainers/add/{id}</a></td>
-										<td>
-												putTrainer
-										</td>											 					
-									</tr>								
-									<tr>
-										<td><a href="#trainer-controller::::/trainers/all::::GET">3</a></td>								
+										<td><a href="#trainer-controller::::/trainers/all::::GET">2</a></td>								
 										<td><a href="#trainer-controller::::/trainers/all::::GET">GET</a></td>								
 										<td><a href="#trainer-controller::::/trainers/all::::GET">/trainers/all</a></td>
 										<td>
@@ -287,7 +271,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">4</a></td>								
+										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">3</a></td>								
 										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">DELETE</a></td>								
 										<td><a href="#trainer-controller::::/trainers/delete/{id}::::DELETE">/trainers/delete/{id}</a></td>
 										<td>
@@ -295,7 +279,7 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">5</a></td>								
+										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">4</a></td>								
 										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">PUT</a></td>								
 										<td><a href="#trainer-controller::::/trainers/update/{id}::::PUT">/trainers/update/{id}</a></td>
 										<td>
@@ -303,19 +287,11 @@
 										</td>											 					
 									</tr>								
 									<tr>
-										<td><a href="#trainer-controller::::/trainers/{id}::::GET">6</a></td>								
+										<td><a href="#trainer-controller::::/trainers/{id}::::GET">5</a></td>								
 										<td><a href="#trainer-controller::::/trainers/{id}::::GET">GET</a></td>								
 										<td><a href="#trainer-controller::::/trainers/{id}::::GET">/trainers/{id}</a></td>
 										<td>
 												getTrainer
-										</td>											 					
-									</tr>								
-									<tr>
-										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">7</a></td>								
-										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">GET</a></td>								
-										<td><a href="#trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">/trainers/{trainerId}/backpack/{backpackId}</a></td>
-										<td>
-												getCapturedPokemon
 										</td>											 					
 									</tr>								
 						</tbody>
@@ -778,9 +754,18 @@
 					</tr>
 						<tr>
 							<td>evolutionId</td>
-							<td>int32</td>
+							<td>int64</td>
 							<td>Id of the pokemon this evolves to</td>
-							<td>int32</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
 							<td>N</td>
 							<td>
 							</td>
@@ -834,175 +819,7 @@
 												<td>OK</td>
 												<td>
 															<div class="panel panel-default">														
-																<div class="panel-heading">int32</div>																
-															</div>														 
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>201</td>
-												<td>Created</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>401</td>
-												<td>Unauthorized</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>403</td>
-												<td>Forbidden</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>404</td>
-												<td>Not Found</td>
-												<td>
-												</td>											
-											</tr>								 					
-									</tr>										
-																				
-								</tbody>						
-													
-							</table>	
-						</div>
-		
-
-
-															
-					
-						<!-- every operation -->
-						<h3><a name="pokemon-controller::::/pokemons/add/{id}::::PUT">PUT /pokemons/add/{id}</a></h3>
-						
-						<div>						
-							<table class="table table-bordered table-condensed operation-intro-table">
-								<tbody>
-										
-										<tr>
-											<td>Summary</td> <td>putPokemon</td>
-										</tr>
-										<tr>											
-											<td>Notes</td> <td></td>
-										</tr>
-										<tr>											
-											<td>Consumes</td> <td>application/json</td>
-										</tr>
-										<tr>											
-											<td>Produces</td> <td>*/*</td>																																						 				
-										</tr>								
-												
-			
-									
-								</tbody>
-							</table>	
-						</div>	
-									
-					<h4>Parameters</h4>	
-								
-			 																					
-						<div>				
-							<table class="table table-bordered param-table">
-								<tbody>
-										<tr>
-											<th>Name</th>										
-											<th>Parameter Type</th>	
-											<th>Data Type</th>																					
-											<th>Required</th>		
-											<th>Description</th>																														
-										</tr>	
-											<tr>																	
-												<td>id</td>
-												<td>path</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>id</td>
-											</tr>								 					
-
-									</tr>
-											<tr>																	
-												<td>pokemon</td>
-												<td>body</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">Pokemon</div>														
-				<table class="table table-condensed table-bordered model-rows-table">																								
-					<tr>
-						<th>Property</th>
-						<th>Type</th>
-						<th>Description</th>
-						<th>Format</th>
-						<th>Required</th>
-						<th>ReadOnly</th>
-					</tr>
-						<tr>
-							<td>evolutionId</td>
-							<td>int32</td>
-							<td>Id of the pokemon this evolves to</td>
-							<td>int32</td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-						<tr>
-							<td>name</td>
-							<td>string</td>
-							<td>Name of the entity</td>
-							<td></td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-						<tr>
-							<td>type</td>
-							<td>string</td>
-							<td>Type of the pokemon</td>
-							<td></td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-				</table>									
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>pokemon</td>
-											</tr>								 					
-
-									</tr>
-																				
-								</tbody>						
-													
-							</table>		
-						</div>	
-										
-						
-
-						<h4>Responses</h4>		
-						<div>				
-							<table class="table table-bordered response-table">
-								<tbody>
-										<tr>
-											<th>HTTP Status Code</th>										
-											<th>Reason</th>	
-											<th>Response Type</th>																																																													
-										</tr>	
-			 								
-											<tr>																	
-												<td>200</td>
-												<td>OK</td>
-												<td>
-															<div class="panel panel-default">														
-																<div class="panel-heading">string</div>																
+																<div class="panel-heading">int64</div>																
 															</div>														 
 												</td>											
 											</tr>								 					
@@ -1091,7 +908,53 @@
 												<td>OK</td>
 												<td>
 															<div class="panel panel-default">														
-																<div class="panel-heading">object</div>																
+																<div class="panel-heading">array[Pokemon]</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>[].evolutionId</td>
+							<td>int64</td>
+							<td>Id of the pokemon this evolves to</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].type</td>
+							<td>string</td>
+							<td>Type of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
 															</div>														 
 												</td>											
 											</tr>								 					
@@ -1171,7 +1034,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -1282,7 +1145,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -1307,9 +1170,18 @@
 					</tr>
 						<tr>
 							<td>evolutionId</td>
-							<td>int32</td>
+							<td>int64</td>
 							<td>Id of the pokemon this evolves to</td>
-							<td>int32</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
 							<td>N</td>
 							<td>
 							</td>
@@ -1450,7 +1322,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -1493,9 +1365,18 @@
 					</tr>
 						<tr>
 							<td>evolutionId</td>
-							<td>int32</td>
+							<td>int64</td>
 							<td>Id of the pokemon this evolves to</td>
-							<td>int32</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
 							<td>N</td>
 							<td>
 							</td>
@@ -1613,6 +1494,69 @@
 						<th>ReadOnly</th>
 					</tr>
 						<tr>
+							<td>backpack</td>
+							<td>Backpack</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[]</td>
+							<td>array[CapturedPokemon]</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonId</td>
+							<td>int64</td>
+							<td>Id of the pokemon</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonLevel</td>
+							<td>int32</td>
+							<td>Level of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonNickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
 							<td>name</td>
 							<td>string</td>
 							<td>Name of the entity</td>
@@ -1705,165 +1649,6 @@
 															
 					
 						<!-- every operation -->
-						<h3><a name="trainer-controller::::/trainers/add/{id}::::PUT">PUT /trainers/add/{id}</a></h3>
-						
-						<div>						
-							<table class="table table-bordered table-condensed operation-intro-table">
-								<tbody>
-										
-										<tr>
-											<td>Summary</td> <td>putTrainer</td>
-										</tr>
-										<tr>											
-											<td>Notes</td> <td></td>
-										</tr>
-										<tr>											
-											<td>Consumes</td> <td>application/json</td>
-										</tr>
-										<tr>											
-											<td>Produces</td> <td>*/*</td>																																						 				
-										</tr>								
-												
-			
-									
-								</tbody>
-							</table>	
-						</div>	
-									
-					<h4>Parameters</h4>	
-								
-			 																					
-						<div>				
-							<table class="table table-bordered param-table">
-								<tbody>
-										<tr>
-											<th>Name</th>										
-											<th>Parameter Type</th>	
-											<th>Data Type</th>																					
-											<th>Required</th>		
-											<th>Description</th>																														
-										</tr>	
-											<tr>																	
-												<td>id</td>
-												<td>path</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>id</td>
-											</tr>								 					
-
-									</tr>
-											<tr>																	
-												<td>trainer</td>
-												<td>body</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">Trainer</div>														
-				<table class="table table-condensed table-bordered model-rows-table">																								
-					<tr>
-						<th>Property</th>
-						<th>Type</th>
-						<th>Description</th>
-						<th>Format</th>
-						<th>Required</th>
-						<th>ReadOnly</th>
-					</tr>
-						<tr>
-							<td>name</td>
-							<td>string</td>
-							<td>Name of the entity</td>
-							<td></td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-						<tr>
-							<td>sex</td>
-							<td>string</td>
-							<td>Sex of the trainer</td>
-							<td></td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-				</table>									
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>trainer</td>
-											</tr>								 					
-
-									</tr>
-																				
-								</tbody>						
-													
-							</table>		
-						</div>	
-										
-						
-
-						<h4>Responses</h4>		
-						<div>				
-							<table class="table table-bordered response-table">
-								<tbody>
-										<tr>
-											<th>HTTP Status Code</th>										
-											<th>Reason</th>	
-											<th>Response Type</th>																																																													
-										</tr>	
-			 								
-											<tr>																	
-												<td>200</td>
-												<td>OK</td>
-												<td>
-															<div class="panel panel-default">														
-																<div class="panel-heading">string</div>																
-															</div>														 
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>201</td>
-												<td>Created</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>401</td>
-												<td>Unauthorized</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>403</td>
-												<td>Forbidden</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>404</td>
-												<td>Not Found</td>
-												<td>
-												</td>											
-											</tr>								 					
-									</tr>										
-																				
-								</tbody>						
-													
-							</table>	
-						</div>
-		
-
-
-															
-					
-						<!-- every operation -->
 						<h3><a name="trainer-controller::::/trainers/all::::GET">GET /trainers/all</a></h3>
 						
 						<div>						
@@ -1909,7 +1694,98 @@
 												<td>OK</td>
 												<td>
 															<div class="panel panel-default">														
-																<div class="panel-heading">object</div>																
+																<div class="panel-heading">array[Trainer]</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>[].backpack</td>
+							<td>Backpack</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].backpack.capturedPokemons[]</td>
+							<td>array[CapturedPokemon]</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].backpack.capturedPokemons[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].backpack.capturedPokemons[].pokemonId</td>
+							<td>int64</td>
+							<td>Id of the pokemon</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].backpack.capturedPokemons[].pokemonLevel</td>
+							<td>int32</td>
+							<td>Level of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].backpack.capturedPokemons[].pokemonNickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].name</td>
+							<td>string</td>
+							<td>Name of the entity</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].sex</td>
+							<td>string</td>
+							<td>Sex of the trainer</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
 															</div>														 
 												</td>											
 											</tr>								 					
@@ -1989,7 +1865,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -2100,7 +1976,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -2123,6 +1999,69 @@
 						<th>Required</th>
 						<th>ReadOnly</th>
 					</tr>
+						<tr>
+							<td>backpack</td>
+							<td>Backpack</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[]</td>
+							<td>array[CapturedPokemon]</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonId</td>
+							<td>int64</td>
+							<td>Id of the pokemon</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonLevel</td>
+							<td>int32</td>
+							<td>Level of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonNickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
 						<tr>
 							<td>name</td>
 							<td>string</td>
@@ -2259,7 +2198,7 @@
 												<td>path</td>
 												<td>
 													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
+														<div class="panel-heading">int64</div>														
 													</div>
 												</td>											
 												<td>Y</td>
@@ -2301,6 +2240,69 @@
 						<th>ReadOnly</th>
 					</tr>
 						<tr>
+							<td>backpack</td>
+							<td>Backpack</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[]</td>
+							<td>array[CapturedPokemon]</td>
+							<td></td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonId</td>
+							<td>int64</td>
+							<td>Id of the pokemon</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonLevel</td>
+							<td>int32</td>
+							<td>Level of the pokemon</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>backpack.capturedPokemons[].pokemonNickname</td>
+							<td>string</td>
+							<td>Nickname of the pokemon</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td></td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
 							<td>name</td>
 							<td>string</td>
 							<td>Name of the entity</td>
@@ -2313,167 +2315,6 @@
 							<td>sex</td>
 							<td>string</td>
 							<td>Sex of the trainer</td>
-							<td></td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-				</table>									
-															</div>														 
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>401</td>
-												<td>Unauthorized</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>403</td>
-												<td>Forbidden</td>
-												<td>
-												</td>											
-											</tr>								 					
-			 								
-											<tr>																	
-												<td>404</td>
-												<td>Not Found</td>
-												<td>
-												</td>											
-											</tr>								 					
-									</tr>										
-																				
-								</tbody>						
-													
-							</table>	
-						</div>
-		
-
-
-															
-					
-						<!-- every operation -->
-						<h3><a name="trainer-controller::::/trainers/{trainerId}/backpack/{backpackId}::::GET">GET /trainers/{trainerId}/backpack/{backpackId}</a></h3>
-						
-						<div>						
-							<table class="table table-bordered table-condensed operation-intro-table">
-								<tbody>
-										
-										<tr>
-											<td>Summary</td> <td>getCapturedPokemon</td>
-										</tr>
-										<tr>											
-											<td>Notes</td> <td></td>
-										</tr>
-										<tr>											
-											<td>Consumes</td> <td></td>
-										</tr>
-										<tr>											
-											<td>Produces</td> <td>*/*</td>																																						 				
-										</tr>								
-												
-			
-									
-								</tbody>
-							</table>	
-						</div>	
-									
-					<h4>Parameters</h4>	
-								
-			 																					
-						<div>				
-							<table class="table table-bordered param-table">
-								<tbody>
-										<tr>
-											<th>Name</th>										
-											<th>Parameter Type</th>	
-											<th>Data Type</th>																					
-											<th>Required</th>		
-											<th>Description</th>																														
-										</tr>	
-											<tr>																	
-												<td>trainerId</td>
-												<td>path</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>trainerId</td>
-											</tr>								 					
-
-									</tr>
-											<tr>																	
-												<td>backpackId</td>
-												<td>path</td>
-												<td>
-													<div class="panel panel-default">														
-														<div class="panel-heading">int32</div>														
-													</div>
-												</td>											
-												<td>Y</td>
-												<td>backpackId</td>
-											</tr>								 					
-
-									</tr>
-																				
-								</tbody>						
-													
-							</table>		
-						</div>	
-										
-						
-
-						<h4>Responses</h4>		
-						<div>				
-							<table class="table table-bordered response-table">
-								<tbody>
-										<tr>
-											<th>HTTP Status Code</th>										
-											<th>Reason</th>	
-											<th>Response Type</th>																																																													
-										</tr>	
-			 								
-											<tr>																	
-												<td>200</td>
-												<td>OK</td>
-												<td>
-															<div class="panel panel-default">														
-																<div class="panel-heading">CapturedPokemon</div>																
-				<table class="table table-condensed table-bordered model-rows-table">																								
-					<tr>
-						<th>Property</th>
-						<th>Type</th>
-						<th>Description</th>
-						<th>Format</th>
-						<th>Required</th>
-						<th>ReadOnly</th>
-					</tr>
-						<tr>
-							<td>pokemonId</td>
-							<td>int32</td>
-							<td>Id of the pokemon</td>
-							<td>int32</td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-						<tr>
-							<td>pokemonLevel</td>
-							<td>int32</td>
-							<td>Level of the pokemon</td>
-							<td>int32</td>
-							<td>N</td>
-							<td>
-							</td>
-						</tr>										
-						<tr>
-							<td>pokemonNickname</td>
-							<td>string</td>
-							<td>Nickname of the pokemon</td>
 							<td></td>
 							<td>N</td>
 							<td>
