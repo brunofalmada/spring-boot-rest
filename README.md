@@ -6,7 +6,7 @@
 
 `Install PostgreSQL 9.6.9`
 
-`Create empty database "spring-data-rest"`
+`Empty database "spring-data-rest"`
 
 ### Installing
 
