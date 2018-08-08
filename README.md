@@ -2,6 +2,11 @@
 
 ## Getting Started 
 
+### Prerequisites
+
+`Install PostgreSQL 9.6.9`
+`Create empty database "spring-data-rest"`
+
 ### Installing
 
 `mvn clean package`
@@ -15,6 +20,7 @@
 * [Spring](https://spring.io/) - Web Framework
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Swagger](https://swagger.io/) - Documentation
+* [PostgreSQL](https://www.postgresql.org/) - Database
 
 ## Documentation
 
