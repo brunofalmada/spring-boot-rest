@@ -26,7 +26,6 @@ public class Trainer extends NamedEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@ApiModelProperty(hidden = true)
 	@OneToOne(targetEntity = Backpack.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
 	private Backpack backpack;
 
