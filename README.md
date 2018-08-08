@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-`Install PostgreSQL 9.6.9`
+`PostgreSQL 9.6.9`
 
 `Empty database "spring-data-rest"`
 
